@@ -1,11 +1,11 @@
 # Duplicate Finder
-
+Charles Wang
 
 This application finds all duplicate entries in both the normal and advanced csv file using Levenshtein distance.
-The output is displayed in JSON format. I've placed the expected output that I get running on my machine at the very bottom of this README.
-Just click on "click to get duplicate entries" from the main screen.
+The output is displayed in JSON format. I've placed the expected output that I get running on my machine below in the README.
+To show the output after running the application, you should be able to just click on "click to get duplicate entries" from the main screen, which will show all the entries ordered by the normal and advanced, and the duplicate/non-duplicates.
 
-All the changes/commits I made were adding a dependency to pom.xml, and bulk of CSV processing in HelloService.java.
+All the changes/commits I made were adding the dependency below to pom.xml, and bulk of CSV processing in HelloService.java.
 
 
 Note:
