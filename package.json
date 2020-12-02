@@ -1,0 +1,28 @@
+{
+  "name": "@validityhq/MonolithStarter",
+  "version": "0.0.1",
+  "description": "A template of the validity starter app!",
+  "author": "Validity",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:validityhq/MonolithStarter.git"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {
+    "cypress": "^3.4.0",
+    "start-server-and-test": "^1.9.1"
+  },
+  "scripts": {
+    "build": "node buildscripts/build-server.js",
+    "build-css": "node-sass-chokidar --include-path ./node_modules ./src/scss -o ./src/scss",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./node_modules ./src/scss -o ./src/scss --watch --recursive",
+    "start": "cd monolithstarter-svc && ./mvnw",
+    "cypress:open": "cypress open",
+    "cy:run-ci": "cypress run --config video=false,numTestsKeptInMemory=0,restartBrowserBetweenSpecFiles=true",
+    "start-and-test-ci": "start-server-and-test start http://localhost:8080 cy:run-ci"
+  }
+}
